@@ -1,5 +1,4 @@
-# 🎮 Flutter Tic Tac Toe Auth App – BDCC Mobile UI Showcase
-
+# 🎮 Flutter Tic Tac Toe Auth App 
 A simple yet instructive Flutter-based mobile app for the BDCC curriculum. This project started as a basic navigation and animation demo, and evolved into a login-protected Tic Tac Toe game.
 
 ---
@@ -47,8 +46,8 @@ A simple yet instructive Flutter-based mobile app for the BDCC curriculum. This 
 
 1. Clone the repo  
    ```bash
-   git clone https://github.com/saadbr/flutter_nav_data.git
-   cd flutter_nav_data
+   git clone https://github.com/ouss-issib/Tic-Tac-Toe-Game.git
+   cd Tic-Tac-Toe-Game
    ```
 
 2. Install dependencies  
