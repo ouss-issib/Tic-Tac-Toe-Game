@@ -4,6 +4,11 @@ import 'screens/login.screen.dart';
 import 'screens/tictactoe.screen.dart';
 
 void main() {
+  bool isInDebugMode = false;
+  assert(isInDebugMode = true); // assert only runs in debug mode
+
+  print('Is in debug mode? $isInDebugMode');
+
   runApp(MyApp());
 }
 

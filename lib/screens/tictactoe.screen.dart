@@ -10,11 +10,14 @@ class TicTacToeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFF2F7FF),
       appBar: AppBar(
         title: Text('Tic Tac Toe - Joueur: $login'),
+        backgroundColor: Colors.blue[600],
         actions: [
           IconButton(
             icon: Icon(Icons.logout),
+            tooltip: 'Se déconnecter',
             onPressed: () async {
               final prefs = await SharedPreferences.getInstance();
               await prefs.remove('login');
@@ -22,7 +25,7 @@ class TicTacToeScreen extends StatelessWidget {
 
               Navigator.of(context).pushAndRemoveUntil(
                 MaterialPageRoute(builder: (context) => LoginScreen()),
-                (Route<dynamic> route) => false,
+                    (Route<dynamic> route) => false,
               );
             },
           )
@@ -60,6 +63,7 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
       _xTurn = true;
     });
   }
+
   void _checkWinner() {
     final lines = [
       [0, 1, 2],
@@ -87,22 +91,89 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
       _showResultDialog("Égalité !");
     }
   }
+
   void _showResultDialog(String message) {
     showDialog(
       context: context,
       barrierDismissible: false,
       builder: (_) => AlertDialog(
-        title: Text('Résultat'),
-        content: Text(message),
+        backgroundColor: Colors.white,
+        title: Text(
+          'Résultat',
+          style: TextStyle(color: Colors.blue[700], fontWeight: FontWeight.bold),
+        ),
+        content: Text(
+          message,
+          style: TextStyle(fontSize: 18),
+        ),
         actions: [
           TextButton(
             onPressed: () {
               Navigator.of(context).pop();
               _resetGame();
             },
-            child: Text('Rejouer'),
+            child: Text(
+              'Rejouer',
+              style: TextStyle(color: Colors.blue[600]),
+            ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildCell(int index) {
+    Color? bgColor;
+    Color textColor;
+
+    if (_board[index] == 'X') {
+      bgColor = Colors.blue[100];
+      textColor = Colors.blue[800]!;
+    } else if (_board[index] == 'O') {
+      bgColor = Colors.red[100];
+      textColor = Colors.red[800]!;
+    } else {
+      bgColor = Colors.grey[200];
+      textColor = Colors.grey[600]!;
+    }
+
+    return GestureDetector(
+      onTap: () => _handleTap(index),
+      child: AnimatedContainer(
+        duration: Duration(milliseconds: 300),
+        margin: EdgeInsets.all(6.0),
+        decoration: BoxDecoration(
+          color: bgColor,
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.05),
+              blurRadius: 5,
+              offset: Offset(0, 3),
+            ),
+          ],
+          border: Border.all(
+            color: Colors.blueGrey.shade100,
+            width: 2,
+          ),
+        ),
+        child: Center(
+          child: Text(
+            _board[index],
+            style: TextStyle(
+              fontSize: 40,
+              fontWeight: FontWeight.bold,
+              color: textColor,
+              shadows: [
+                Shadow(
+                  blurRadius: 3,
+                  color: Colors.black12,
+                  offset: Offset(1, 1),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -110,37 +181,51 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
       children: [
-        GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-          ),
-          shrinkWrap: true,
-          itemCount: 9,
-          itemBuilder: (context, index) {
-            return GestureDetector(
-              onTap: () => _handleTap(index),
-              child: Container(
-                margin: EdgeInsets.all(4.0),
-                decoration: BoxDecoration(
-                  border: Border.all(),
-                  color: Colors.grey[200],
-                ),
-                child: Center(
-                  child: Text(
-                    _board[index],
-                    style: TextStyle(fontSize: 32.0),
-                  ),
-                ),
+        Container(
+          width: 320,
+          height: 320,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(24),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.blue.withOpacity(0.15),
+                blurRadius: 30,
+                offset: Offset(0, 12),
               ),
-            );
-          },
+            ],
+          ),
+          child: GridView.builder(
+            padding: EdgeInsets.all(12),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+            ),
+            itemCount: 9,
+            physics: NeverScrollableScrollPhysics(),
+            itemBuilder: (_, index) => _buildCell(index),
+          ),
         ),
-        SizedBox(height: 20),
-        ElevatedButton(
-          onPressed: _resetGame,
-          child: Text('Réinitialiser'),
+        SizedBox(height: 30),
+        SizedBox(
+          width: 160,
+          height: 48,
+          child: ElevatedButton(
+            onPressed: _resetGame,
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blue[600],
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(24),
+              ),
+              elevation: 8,
+              shadowColor: Colors.blueAccent,
+            ),
+            child: Text(
+              'Réinitialiser',
+              style: TextStyle(fontSize: 18, color: Colors.white),
+            ),
+          ),
         )
       ],
     );

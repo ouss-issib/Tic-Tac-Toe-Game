@@ -17,10 +17,10 @@ A simple yet instructive Flutter-based mobile app for the BDCC curriculum. This 
 
 <table>
   <tr>
-    <td><img src="screenshots/Screenshot 2025-06-28 133022.png" width="200"/></td>
-    <td><img src="screenshots/Screenshot 2025-06-28 133029.png" width="200"/></td>
-    <td><img src="screenshots/Screenshot 2025-06-28 133051.png" width="200"/></td>
-    <td><img src="screenshots/Screenshot 2025-06-28 133112.png" width="200"/></td>
+    <td><img src="captures/Screenshot 2025-06-28 133022.png" width="200"/></td>
+    <td><img src="captures/Screenshot 2025-06-28 133029.png" width="200"/></td>
+    <td><img src="captures/Screenshot 2025-06-28 133051.png" width="200"/></td>
+    <td><img src="captures/Screenshot 2025-06-28 133112.png" width="200"/></td>
   </tr>
   <tr>
     <td align="center"><b>Login</b></td>
@@ -29,9 +29,9 @@ A simple yet instructive Flutter-based mobile app for the BDCC curriculum. This 
     <td align="center"><b>Wrong Credentials</b></td>
   </tr>
   <tr>
-    <td><img src="screenshots/Screenshot 2025-06-28 133124.png" width="200"/></td>
-    <td><img src="screenshots/Screenshot 2025-06-28 133139.png" width="200"/></td>
-    <td><img src="screenshots/Screenshot 2025-06-28 133157.png" width="200"/></td>
+    <td><img src="captures/Screenshot 2025-06-28 133124.png" width="200"/></td>
+    <td><img src="captures/Screenshot 2025-06-28 133139.png" width="200"/></td>
+    <td><img src="captures/Screenshot 2025-06-28 133157.png" width="200"/></td>
   </tr>
   <tr>
     <td align="center"><b>Game Screen</b></td>
