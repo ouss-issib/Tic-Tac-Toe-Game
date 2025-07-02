@@ -1,48 +1,73 @@
-# 🎮 Flutter Tic Tac Toe Auth App 
-A simple yet instructive Flutter-based mobile app for the BDCC curriculum. This project started as a basic navigation and animation demo, and evolved into a login-protected Tic Tac Toe game.
+# 🎮 Tic Tac Toe Flutter App avec Authentification
+
+Ce dépôt contient une **application mobile Flutter** pour jouer au jeu du **Tic Tac Toe** avec un système simple d’**authentification** et gestion de session.  
+L’application propose une interface utilisateur fluide, un système de sauvegarde des comptes via `SharedPreferences`, ainsi que la gestion des parties et affichage des résultats (victoire, égalité).
 
 ---
 
-## ✨ Features Added
+## 🎯 Objectifs du projet
 
-- 🔐 **Login & Sign-Up Screens** with local credential storage using `SharedPreferences`
-- 💾 **Saved Login**: User stays logged in between sessions
-- 🔓 **Logout** functionality from Tic Tac Toe screen
-- 🎯 **Tic Tac Toe Game Logic**: Detects winner or draw
-- 🪄 **Popup Result Dialog**: Shows the winner or "Égalité"
-
----
-
-## 🖼️ Screenshots
-
-<table>
-  <tr>
-    <td><img src="captures/Screenshot 2025-06-28 133022.png" width="200"/></td>
-    <td><img src="captures/Screenshot 2025-06-28 133029.png" width="200"/></td>
-    <td><img src="captures/Screenshot 2025-06-28 133051.png" width="200"/></td>
-    <td><img src="captures/Screenshot 2025-06-28 133112.png" width="200"/></td>
-  </tr>
-  <tr>
-    <td align="center"><b>Login</b></td>
-    <td align="center"><b>Sign Up</b></td>
-    <td align="center"><b>Account Created</b></td>
-    <td align="center"><b>Wrong Credentials</b></td>
-  </tr>
-  <tr>
-    <td><img src="captures/Screenshot 2025-06-28 133124.png" width="200"/></td>
-    <td><img src="captures/Screenshot 2025-06-28 133139.png" width="200"/></td>
-    <td><img src="captures/Screenshot 2025-06-28 133157.png" width="200"/></td>
-  </tr>
-  <tr>
-    <td align="center"><b>Game Screen</b></td>
-    <td align="center"><b>Winner Popup</b></td>
-    <td align="center"><b>Draw Popup</b></td>
-  </tr>
-</table>
+- 🔐 Gérer l’authentification utilisateur (inscription, connexion, déconnexion)
+- 🎮 Implémenter un jeu Tic Tac Toe interactif avec état dynamique
+- 📱 Offrir une UI claire, responsive et agréable avec Material Design
+- 🧩 Gérer les parties, détection du gagnant et égalité, avec possibilité de rejouer
 
 ---
 
-## 🚀 Getting Started
+## 📂 Structure du projet Flutter
+
+```
+lib/
+├── main.dart
+├── screen/
+    ├──login.screen.dart
+    ├── signup.screen.dart
+    └── tictactoe.screen.dart
+```
+
+
+---
+
+## 🛠️ Technologies utilisées
+
+- **Flutter** & **Dart**  
+- **SharedPreferences** pour la gestion locale des comptes  
+- **Material Design** pour l’interface utilisateur
+
+---
+
+## ✅ Fonctionnalités principales
+
+- 🔐 **Authentification** (inscription + connexion) avec données locales  
+- 🎲 **Jeu Tic Tac Toe** avec gestion de tour et détection automatique de la victoire ou égalité  
+- 🔄 **Réinitialisation** et possibilité de rejouer après chaque partie  
+- 🚪 **Déconnexion** avec retour à l’écran de login  
+- 🎨 UI simple et ergonomique avec Material Design  
+
+---
+
+## ⏵ Guide d’utilisation
+
+### 🔐 Identifiants
+
+- Inscrivez-vous avec un nom d’utilisateur et un mot de passe via l’écran d’inscription.  
+- Utilisez ces identifiants pour vous connecter à l’app.  
+- La session est sauvegardée localement.
+
+### 🎮 Jouer au Tic Tac Toe
+
+- Après connexion, lancez une partie de Tic Tac Toe.  
+- Touchez une case vide pour jouer votre coup.  
+- Le jeu détecte automatiquement les victoires ou égalités et affiche un dialogue.  
+- Vous pouvez rejouer autant de fois que souhaité.
+
+### 🚪 Déconnexion
+
+- Utilisez le bouton logout dans la barre d’app pour revenir à l’écran de connexion.
+
+---
+
+## ▶️ Instructions d’exécution
 
 1. Clone the repo  
    ```bash
@@ -60,23 +85,4 @@ A simple yet instructive Flutter-based mobile app for the BDCC curriculum. This 
    flutter run
    ```
 
-> ✅ Emulator or real device with Android SDK 34+ recommended
 
----
-
-## 📁 Folder Structure
-
-```
-lib/
-├── main.dart
-├── screen/
-    ├──login.screen.dart
-    ├── signup.screen.dart
-    └── tictactoe.screen.dart
-```
-
----
-
-## 👨‍💻 Author
-
-**Saad El Mabrouk**  
