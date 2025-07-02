@@ -1,6 +1,6 @@
 # 🎮 Tic Tac Toe Flutter App avec Authentification
 
-Ce dépôt contient une **application mobile Flutter** pour jouer au jeu du **Tic Tac Toe** avec un système simple d’**authentification** et gestion de session.  
+Ce dépôt contient une **application mobile Flutter** pour jouer au jeu du **Tic Tac Toe** avec un système simple d’**authentification** .  
 L’application propose une interface utilisateur fluide, un système de sauvegarde des comptes via `SharedPreferences`, ainsi que la gestion des parties et affichage des résultats (victoire, égalité).
 Ce projet a été réalisé dans le cadre du module de **Développement Mobile Multiplatforme** encadré par **Mr JAMAL MAWANE**.
 
