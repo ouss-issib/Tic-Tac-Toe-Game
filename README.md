@@ -85,4 +85,13 @@ lib/
    flutter run
    ```
 
+## 📸 Captures d’écran
+
+| Login Screen | SignUp Screen | After Signup | Notification |
+|--------------|--------------|--------------|--------------|
+| ![Login](./captures/login.png) | ![Signup](./captures/signup.png) | ![After Signup](./captures/aftersignup.png) | ![Notification](./captures/notification.png) |
+
+| Home Screen | Game Start | Player Wins | Draw (Égalité) |
+|-------------|------------|-------------|----------------|
+| ![Home](./captures/home.png) | ![Game Start](./captures/gamestart.png) | ![Player Win](./captures/playerwin.png) | ![Draw](./captures/egalite.png) |
 
