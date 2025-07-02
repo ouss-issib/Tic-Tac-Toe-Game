@@ -91,7 +91,7 @@ lib/
 |--------------|--------------|--------------|--------------|
 | ![Login](./captures/login.png) | ![Signup](./captures/signup.png) | ![After Signup](./captures/aftersignup.png) | ![Notification](./captures/notification.png) |
 
-| Home Screen | Game Start | Player Wins | Draw (Égalité) |
+| Home Screen | Game Start | Player X Wins | Draw (Égalité) |
 |-------------|------------|-------------|----------------|
-| ![Home](./captures/home.png) | ![Game Start](./captures/gamestart.png) | ![Player Win](./captures/playerwin.png) | ![Draw](./captures/egalite.png) |
+| ![Home](./captures/home.png) | ![Game Start](./captures/gamestart.png) | ![Player X Win](./captures/playerwin.png) | ![Draw](./captures/egalite.png) |
 
