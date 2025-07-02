@@ -87,7 +87,7 @@ lib/
 
 ## 📸 Captures d’écran
 
-| Login Screen | SignUp Screen | After Signup | Notification |
+| Login Screen | Create Account | Signup Screen | Notification |
 |--------------|--------------|--------------|--------------|
 | ![Login](./captures/login.png) | ![Signup](./captures/signup.png) | ![After Signup](./captures/aftersignup.png) | ![Notification](./captures/notification.png) |
 
